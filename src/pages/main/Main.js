@@ -1,6 +1,7 @@
-import "./Main.scss"
-import Welcome from "../welcome/Welcome";
-import Form from "../form/Form";
+import "./Main.scss";
+import {useState} from 'react';
+import Welcome from "../../components/welcome/Welcome";
+import Form from "../../components/form/Form";
 
 export const Main = () => {
     return (

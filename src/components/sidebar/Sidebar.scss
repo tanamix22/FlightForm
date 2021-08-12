@@ -6,6 +6,9 @@
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
+.sidebar__menu{
+    padding: 20px;
+}
 .sidebar__title{
     display: flex;
     justify-content: space-between;
@@ -44,19 +47,18 @@
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
 }
-.active_menu_link{
+
+.sidebar__link.ative,
+.sidebar__link:hover{
     background: rgba(62, 161,117, 0.3);
     color: #3ea175;
 }
-.active_menu_link a{
-    color: #3ea175 !important;
-}
-.sidebar__link > a {
-    text-decoration: none;
-    color: #a5aaad;
-    font-weight: 700;
-}
+
+
 .sidebar__link > .navbar__icon-company{
     margin-right: 10px;
     font-size: 18px;

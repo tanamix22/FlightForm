@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import Main from './components/main/Main';
+import Main from './pages/main/Main';
 import Navbar from './components/navbar/navbar';
 import  Sidebar  from './components/sidebar/Sidebar';
 

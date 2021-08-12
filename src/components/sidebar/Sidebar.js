@@ -17,12 +17,36 @@ export const Sidebar = ({sidebarOpen, closeSidebar}) => {
                 ></FontAwesomeIcon>
             </div>
             <div className="sidebar__menu">
-                <div className="sidebar__link active_menu_link">
+                <div className="sidebar__link active active_menu_link">
                 <FontAwesomeIcon className="navbar__icon-company" icon={faHome}></FontAwesomeIcon>
-                <a href="#">Dashboard</a>
+                Home
                 </div>
                 <h2>Agencies</h2>
-                <div className="sidebar__link">
+                
+                    <ul>
+                        <li className="sidebar__link">
+                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
+                            Company 1
+                        </li>
+                        <li className="sidebar__link">
+                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
+                            Company 2
+                        </li>
+                        <li className="sidebar__link">
+                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
+                            Company 3
+                        </li>
+                        <li className="sidebar__link">
+                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
+                            Company 4
+                        </li>
+                        <li className="sidebar__link">
+                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
+                            Company 5
+                        </li>
+                    </ul>
+
+                {/* <div className="sidebar__link">
                 <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
                 <a href="#">Company 1</a>
                 </div>
@@ -61,7 +85,7 @@ export const Sidebar = ({sidebarOpen, closeSidebar}) => {
                 <div className="sidebar__link">
                 <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
                 <a href="#">Company 10</a>
-                </div>
+                </div> */}
             </div>
         </div>
     )
