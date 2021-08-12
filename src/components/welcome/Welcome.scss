@@ -1,0 +1,25 @@
+.greating{
+    display: flex;
+    justify-content: center;
+
+    &__img{
+        max-height: 100px;
+        object-fit: contain;
+        margin-right: 20px;
+    } 
+    &__container{
+        margin-left: 20px;
+       
+    } 
+    .greating__container h1{
+        font-size: 32px;
+        color: #2e4a66;
+        margin-bottom: 5px;
+    }
+    .greating__container p{
+        font-size: 22px;
+        color: #a5aaad;
+        font-weight: 700;
+    }
+   
+}
