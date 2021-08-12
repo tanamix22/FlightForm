@@ -1,94 +1,79 @@
 import "./Sidebar.scss";
 import logo from "../../assets/airplane.JPG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faHome, faPlane } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faHome, faPlane } from "@fortawesome/free-solid-svg-icons";
+import { NavLink, BrowserRouter as Router } from "react-router-dom";
 
-export const Sidebar = ({sidebarOpen, closeSidebar}) => {
-
-    return (
-        <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
-            <div className="sidebar__title">
-                <div className="sidebar__img">
-                    <img src={logo} alt={logo} />
-                    <h1>FlightForm</h1>
-                </div>
-                <FontAwesomeIcon className="navbar__icon-times" icon={faTimes}
-                    id="sidebarIcon" onClick={() => closeSidebar()}
-                ></FontAwesomeIcon>
-            </div>
-            <div className="sidebar__menu">
-                <div className="sidebar__link active active_menu_link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faHome}></FontAwesomeIcon>
-                Home
-                </div>
-                <h2>Agencies</h2>
-                
-                    <ul>
-                        <li className="sidebar__link">
-                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                            Company 1
-                        </li>
-                        <li className="sidebar__link">
-                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                            Company 2
-                        </li>
-                        <li className="sidebar__link">
-                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                            Company 3
-                        </li>
-                        <li className="sidebar__link">
-                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                            Company 4
-                        </li>
-                        <li className="sidebar__link">
-                            <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                            Company 5
-                        </li>
-                    </ul>
-
-                {/* <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 1</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 2</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 3</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 4</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 5</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 6</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 7</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 8</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 9</a>
-                </div>
-                <div className="sidebar__link">
-                <FontAwesomeIcon className="navbar__icon-company" icon={faPlane}></FontAwesomeIcon>
-                <a href="#">Company 10</a>
-                </div> */}
-            </div>
+export const Sidebar = ({ sidebarOpen, closeSidebar }) => {
+  return (
+    <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
+      <div className="sidebar__title">
+        <div className="sidebar__img">
+          <img src={logo} alt={logo} />
+          <h1>FlightForm</h1>
         </div>
-    )
-}
+        <FontAwesomeIcon
+          className="navbar__icon-times"
+          icon={faTimes}
+          id="sidebarIcon"
+          onClick={() => closeSidebar()}
+        ></FontAwesomeIcon>
+      </div>
+      <div className="sidebar__menu">
+        <div className="sidebar__link active active_menu_link">
+          <NavLink to="/" exact={true}>
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faHome}
+            ></FontAwesomeIcon>
+            Home
+          </NavLink>
+        </div>
+        <h2>Agencies</h2>
+
+        <ul>
+          <li className="sidebar__link">
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faPlane}
+            ></FontAwesomeIcon>
+            <NavLink to="/1" exact={true}>
+              Company 1
+            </NavLink>
+          </li>
+
+          <li className="sidebar__link">
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faPlane}
+            ></FontAwesomeIcon>
+            Company 2
+          </li>
+          <li className="sidebar__link">
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faPlane}
+            ></FontAwesomeIcon>
+            Company 3
+          </li>
+          <li className="sidebar__link">
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faPlane}
+            ></FontAwesomeIcon>
+            Company 4
+          </li>
+          <li className="sidebar__link">
+            <FontAwesomeIcon
+              className="navbar__icon-company"
+              icon={faPlane}
+            ></FontAwesomeIcon>
+            Company 5
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 export default Sidebar;
