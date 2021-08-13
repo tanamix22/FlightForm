@@ -1,10 +1,18 @@
 import "./Sidebar.scss";
-import logo from "../../assets/airplane.JPG";
+import React, { useEffect, useState } from "react";
+import logo from "../../assets/airplane.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faHome, faPlane } from "@fortawesome/free-solid-svg-icons";
-import { NavLink, BrowserRouter as Router } from "react-router-dom";
+import { faTimes, faPlane } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import DataAgencie from "../../utils/dummyData.json";
 
 export const Sidebar = ({ sidebarOpen, closeSidebar }) => {
+  const [agencie, setAgencie] = useState([]);
+
+  useEffect(() => {
+    setAgencie(DataAgencie);
+  }, []);
+
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
       <div className="sidebar__title">
@@ -20,56 +28,20 @@ export const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         ></FontAwesomeIcon>
       </div>
       <div className="sidebar__menu">
-        <div className="sidebar__link active active_menu_link">
-          <NavLink to="/" exact={true}>
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faHome}
-            ></FontAwesomeIcon>
-            Home
-          </NavLink>
-        </div>
         <h2>Agencies</h2>
 
-        <ul>
-          <li className="sidebar__link">
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faPlane}
-            ></FontAwesomeIcon>
-            <NavLink to="/1" exact={true}>
-              Company 1
-            </NavLink>
-          </li>
-
-          <li className="sidebar__link">
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faPlane}
-            ></FontAwesomeIcon>
-            Company 2
-          </li>
-          <li className="sidebar__link">
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faPlane}
-            ></FontAwesomeIcon>
-            Company 3
-          </li>
-          <li className="sidebar__link">
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faPlane}
-            ></FontAwesomeIcon>
-            Company 4
-          </li>
-          <li className="sidebar__link">
-            <FontAwesomeIcon
-              className="navbar__icon-company"
-              icon={faPlane}
-            ></FontAwesomeIcon>
-            Company 5
-          </li>
+        <ul className="list">
+          {agencie.map((item, key) => (
+            <li className="sidebar__link" key={key}>
+              <FontAwesomeIcon
+                className="navbar__icon-company"
+                icon={faPlane}
+              ></FontAwesomeIcon>
+              <NavLink className="Navlink" to={"/" + item.id} exact={true}>
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

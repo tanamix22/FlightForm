@@ -1,25 +1,29 @@
-.greating{
-    display: flex;
-    justify-content: center;
+@import "../../index.scss";
+.greating {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  @media only screen and (max-width: 605px) {
+    display: block;
+  }
 
-    &__img{
-        max-height: 100px;
-        object-fit: contain;
-        margin-right: 20px;
-    } 
-    &__container{
-        margin-left: 20px;
-       
-    } 
-    .greating__container h1{
-        font-size: 32px;
-        color: #2e4a66;
-        margin-bottom: 5px;
-    }
-    .greating__container p{
-        font-size: 22px;
-        color: #a5aaad;
-        font-weight: 700;
-    }
-   
+  &__img {
+    max-height: 150px;
+    min-width: 130px;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  &__container {
+    margin-left: 20px;
+  }
+  .greating__container h1 {
+    font-size: 32px;
+    color: $text-color;
+    margin-bottom: 5px;
+  }
+  .greating__container p {
+    font-size: 22px;
+    color: $soft-text-color;
+    font-weight: 700;
+  }
 }

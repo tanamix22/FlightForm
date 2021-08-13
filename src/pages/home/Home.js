@@ -1,5 +1,12 @@
+import Contein from "../../components/contein/Contein";
+import "./Home.scss";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main className="mainHome">
+      <Contein />
+    </main>
+  );
 };
 
 export default Home;

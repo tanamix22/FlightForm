@@ -1,10 +1,14 @@
+@import "../../index.scss";
 .agencyForm {
   flex: 4;
+  display: flex;
+  justify-content: center;
 
   &__form {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
+    min-width: 200px;
   }
   &__form-item {
     width: 500px;
@@ -15,27 +19,26 @@
   }
   &__form-item > label {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
-    color: gray;
+    color: $soft-text-color;
   }
   &__form-item > input {
     height: 20px;
     padding: 10px;
-    border: 1px solid gray;
+    border: 1px solid $soft-text-color;
     border-radius: 5px;
   }
   .agencyForm__form-button {
-    width: 400px;
+    width: 500px;
     border: none;
-    background-color: darkblue;
-    color: white;
-    padding: 7px 10px;
+    background-color: $background-nav-color;
+    color: $secundary-text;
+    padding: 15px 10px;
     font-weight: 700;
     border-radius: 10px;
     margin-top: 30px;
     cursor: pointer;
     display: inline-block;
-    /* flex-wrap: wrap; */
   }
 }

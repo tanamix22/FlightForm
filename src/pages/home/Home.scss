@@ -1,5 +1,7 @@
-main {
+.mainHome {
   grid-area: main;
   overflow-y: auto;
   padding: 20px 35px;
+  display: flex;
+  justify-content: center;
 }
