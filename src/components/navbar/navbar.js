@@ -12,18 +12,18 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
         ></FontAwesomeIcon>
       </div>
       <div className="navbar__left">
-        <a href="#" className="active_link">
+        <a href="/" className="active_link">
           Agencies
         </a>
       </div>
       <div className="navbar__right">
-        <a href="#">
+        <a href="/">
           <FontAwesomeIcon
             className="navbar__right-icon"
             icon={faSearch}
           ></FontAwesomeIcon>
         </a>
-        <a href="#">
+        <a href="/">
           <FontAwesomeIcon
             className="navbar__right-icon"
             icon={faClock}
