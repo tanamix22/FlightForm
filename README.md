@@ -1,16 +1,16 @@
 # FlightForm
- technical test for itglober
+ Application to create appointments for veterinary
 
 
-App to simulate formulary for flight agencies. This application was designed for a tecnichal test.
+Application to create appointments for veterinary.
 
 # Technology
 
-HTML, CSS, SCSS and React.
+HTML, CSS, SCSS, Skeleton and React.
 
 # Deploy
 
-The project is displayed [Here](https://flight-form.vercel.app/).
+The project is displayed [Here]().
 
 
 # Team 
