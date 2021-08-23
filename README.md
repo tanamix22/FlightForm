@@ -1,16 +1,16 @@
-# FlightForm
- Application to create appointments for veterinary
+# Citas
+ technical test for itglober
 
 
-Application to create appointments for veterinary.
+App to simulate formulary for flight agencies. This application was designed for a tecnichal test.
 
 # Technology
 
-HTML, CSS, SCSS, Skeleton and React.
+HTML, CSS, SCSS and React.
 
 # Deploy
 
-The project is displayed [Here](https://flight-form-67xzwfs7m-flightform.vercel.app/).
+The project is displayed [Here](https://flight-form.vercel.app/).
 
 
 # Team 
@@ -18,7 +18,5 @@ The project is displayed [Here](https://flight-form-67xzwfs7m-flightform.vercel.
 the project was developed out by:  
  Jonnathan Reyes Garcia @tanamix22 - Frontend
 
- # How can you contribute?
- 
 
 
